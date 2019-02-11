@@ -13,3 +13,9 @@ PassWord-Locker
 
  ## link to live site on GitHub Pages
  https://mukantwarivirginie.github.io/PassWord-Locker/
+
+
+ ### Copyrght and license information
+
+
+MIT Copyrght 2019
