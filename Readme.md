@@ -5,7 +5,7 @@ PassWord-Locker we generated python3.6
  virginie mukantwari
 
  ## Description
-  to generate new passwords ones
+  This is project help manage to generate new passwords ones
 
 ## Technology used
 Linux/ubuntu
