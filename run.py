@@ -32,3 +32,11 @@ def create_user(self,first_name,last_name,number,password,email):
     Function that check if a contact exists with that number and return a Boolean
     '''
     return User.user_exist(number)
+
+
+
+    def display_contacts():
+    '''
+    Function that returns all the saved contacts
+    '''
+    return User.display_contacts()
