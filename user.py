@@ -6,12 +6,12 @@ class User:
 
     def __init__(self,first_name,last_name,number,password,email):
 
-      # docstring removed for simplicity
+        # docstring removed for simplicity
 
         self.first_name = first_name
         self.last_name = last_name
         self.phone_number = number
-        self.password = passwordlaste
+        self.password = password
         self.email = email
 
     def save_user(self):
@@ -21,11 +21,8 @@ class User:
         '''
 
         User.user_list.append(self)
-   
-   
 
 
-   
     def delete_user(self):
 
         '''
@@ -33,4 +30,26 @@ class User:
         '''
 
         User.user_list.remove(self)
-   
+
+
+    @classmethod
+    def display_contacts(cls):
+        '''
+        method that returns the user list
+        '''
+        return cls.user_list
+
+
+    def user_exist(cls,number):
+        '''
+        Method that checks if a user exists from the user list.
+        Args:
+            number: Phone number to search if it exists
+        Returns :
+            Boolean: True or false depending if the user exists
+        '''
+        for user in cls.user_list:
+            if user.phone_number == number:
+                    return True
+
+        return False
