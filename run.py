@@ -18,3 +18,9 @@ def create_user(self,first_name,last_name,number,password,email):
     Function to delete a user
     '''
     user.delete_user()
+
+    def find_user(number):
+    '''
+    Function that finds a user by number and returns the user
+    '''
+    return User.find_by_number(number)
