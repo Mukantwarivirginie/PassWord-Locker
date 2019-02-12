@@ -22,7 +22,7 @@ def test_init(self):
     '''
     self.assertEqual(self.new_user.first_name,"virginie")
     self.assertEqual(self.new_user.last_name,"mukantwari")
-    self.assertEqual(self.new_user.phone_number,"0786679517")
+    self.assertEqual(self.new_user.number,"0786679517")
     self.assertEqual(self.new_user.password,"iradukunda")
     self.assertEqual(self.new_user.email,"virgm2020@gmail.com")
 

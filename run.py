@@ -9,40 +9,40 @@ def create_user(first_name,last_name,number,password,email):
     return new_user
     
 
-def save_contacts(user):
+def save_user(user):
     '''
     Function to save user
     '''
     user.save_user()
 
 
-def del_user(user):
-    '''
-    Function to delete a user
-    '''
-    user.delete_user()
+# def del_user(user):
+#     '''
+#     Function to delete a user
+#     '''
+#     user.delete_user()
 
-def find_user(number):
-    '''
-    Function that finds a user by number and returns the user
-    '''
-    return User.find_by_number(number)
-
-
-
-def check_existing_contacts(number):
-    '''
-    Function that check if a contact exists with that number and return a Boolean
-    '''
-    return User.user_exist(number)
+# def find_user(number):
+#     '''
+#     Function that finds a user by number and returns the user
+#     '''
+#     return User.find_by_number(number)
 
 
 
-def display_contacts():
-    '''
-    Function that returns all the saved contacts
-    '''
-    return User.display_contacts()
+# def check_existing_contacts(number):
+#     '''
+#     Function that check if a contact exists with that number and return a Boolean
+#     '''
+#     return User.user_exist(number)
+
+
+
+# def display_contacts():
+#     '''
+#     Function that returns all the saved contacts
+#     '''
+#     return User.display_contacts()
 
 
 
@@ -72,22 +72,22 @@ def main():
             last_name = input()
 
             print("Phone number ...")
-            phone_number = input()
+            number = input()
 
             print("password...")
             password = input()
 
             print("Email address ...")
-            email_address = input()
+            email = input()
 
 
 
 
 
 
-            save_contacts(create_user(self,first_name,last_name,number,password,email)) # create and save new user.
+            save_user(create_user(first_name,last_name,number,password,email)) # create and save new user.
             print ('\n')
-            print(f"New User{first_name} {last_name} created")
+            print(f"New User {first_name} {last_name} {number} {password} {email} created")
             print ('\n')
         elif short_code == 'dc':
 
@@ -96,7 +96,7 @@ def main():
                 print('\n')
 
                 for user in display_contacts():
-                    print(f"{user.first_name} {user.last_name} .....{user.phone_number}")
+                    print(f"{user.first_name} {user.last_name} .....{user.number}")
 
                     print('\n')
                 else:
@@ -111,11 +111,11 @@ def main():
                 search_number = input()
                 if check_existing_contacts(search_number):
                    search_user = find_user(search_number)
-                   print(f"{search_user.first_name} {search_user.last_name}")
+                   print(f"{search_user.number} {search_user.email}")
                    print('-' * 20)
 
-                   print(f"Phone number.......{search_user.phone_number}")
-                   print(f"Email address.......{search_user.email}")
+                   print(f"number.......{search_user.number}")
+                   print(f"email.......{search_user.email}")
                 else:
                     print("That user does not exist")
 
