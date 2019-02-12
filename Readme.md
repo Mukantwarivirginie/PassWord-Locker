@@ -1,13 +1,16 @@
 # Project Name
-PassWord-Locker
+PassWord-Locker we generated python3.6 
 
 ## Author name
  virginie mukantwari
 
  ## Description
+  to generate new passwords ones
 
 ## Technology used
+Linux/ubuntu
 
+python 3.6
 
 
  ## Contact Information
