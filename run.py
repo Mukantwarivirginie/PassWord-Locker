@@ -76,7 +76,7 @@ def main():
 
             print("password...")
             password = input()
-
+            print(f"password lenght is { len(password)} for the password created")
             print("Email address ...")
             email = input()
 
